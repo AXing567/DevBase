@@ -1,0 +1,45 @@
+{
+  "name": "@autotemu/shared",
+  "version": "1.0.0",
+  "description": "AutoTemu 项目共享类型和工具库",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./types": {
+      "import": "./dist/types/index.mjs",
+      "require": "./dist/types/index.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "type-check": "tsc --noEmit",
+    "clean": "rimraf dist"
+  },
+  "keywords": [
+    "autotemu",
+    "shared",
+    "types"
+  ],
+  "author": "AutoTemu Team",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.3.0",
+    "tsup": "^8.0.0",
+    "rimraf": "^5.0.0"
+  },
+  "files": [
+    "dist",
+    "types"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
